@@ -1,17 +1,31 @@
 import fs from 'fs'
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Display } from '../components/Display';
 import Header from "../components/Header";
 import styles  from '../styles/header.module.scss'
 
 import {Datos,Context} from '../components/Context'
+import Buscador from '../components/Buscador';
 
 export default function Home({elementos}) {
   const [num,setNum]= useState(0)
-  const {elinput} = useContext(Context)
+  const {elinput,setAll,all} = useContext(Context)
+
+
+  useEffect(()=>{
+    console.log();
+    if(elementos){
+      setAll(()=>elementos)
+      console.info('nice',all)
+    }else{
+      console.error('error tragico')
+    }
+
+  },[])
 
   return (
     <Datos>
+      <Buscador data={elementos} />
       <Header/>
       <div className={styles.botonesindex}>
 
