@@ -1,13 +1,14 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import styles  from '../styles/header.module.scss'
+import { Context } from '../components/Context.jsx'
 
 
 export default function Input(){
-    const [text,setText] = useState('')
 
+    const {setInput} = useContext(Context) 
     return(
         <div className={styles.inputContainer}>
-            <input onChange={(el)=> setText(el.target.value)} placeholder='Search' type='text'></input>
+            <input onChange={(el)=> setInput(el.target.value)} placeholder='Search' type='text'></input>
              <span><i className={`bi bi-search ${styles.i}`}></i></span>
         </div>
     )

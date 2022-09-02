@@ -1,19 +1,17 @@
 import fs from 'fs'
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Display } from '../components/Display';
 import Header from "../components/Header";
 import styles  from '../styles/header.module.scss'
 
+import {Datos,Context} from '../components/Context'
+
 export default function Home({elementos}) {
-
-
-
   const [num,setNum]= useState(0)
-
-  console.log(8785,num);
+  const {elinput} = useContext(Context)
 
   return (
-    <div >
+    <Datos>
       <Header/>
       <div className={styles.botonesindex}>
 
@@ -23,7 +21,7 @@ export default function Home({elementos}) {
       </div>
       <Display datos={elementos[num]} ></Display>
 
-    </div>
+    </Datos>
   );
 }
 
