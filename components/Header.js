@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
 import styles  from '../styles/header.module.scss'
+import Input from "./Input";
 
 export default function Header() {
   return (
@@ -20,6 +21,10 @@ export default function Header() {
             Search
           </Link>
         </ul>
+        <div>
+
+        <Input></Input>
+        </div>
       </nav>
     </>
   );

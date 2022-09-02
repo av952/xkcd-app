@@ -27,13 +27,10 @@ export async function getStaticPaths(){
 
   let elementos =  fs.readFileSync('./comics/data.json')
   elementos = JSON.parse(elementos)
-  console.log(8686,elementos[0].num);
-
 
   const concatenado = elementos.map(el=> el.title.split(' ').join('-').toLowerCase())
 
   const paths  = elementos.map(el=> ({params:{id:`${el.num}`}}))
-
 
   return{
     paths,
@@ -41,10 +38,8 @@ export async function getStaticPaths(){
   }
 
 }
-
 export async function getStaticProps({params}){
 
-  console.log(8626,params.id);
 
   let elementos =  fs.readFileSync('./comics/data.json')
   elementos = await JSON.parse(elementos)
@@ -54,7 +49,6 @@ export async function getStaticProps({params}){
 
   const datos2 =  elementos.find(el => el.num == params.id)
 
- console.log(7575,datos2);
 
   return{
     props:{
