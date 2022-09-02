@@ -6,10 +6,10 @@ export const Datos = ({children})=>{
 
     const [elinput,setInput] = useState('')
     const [all,setAll] = useState([])
-    console.log(2222,elinput);
+    const[data,setData] =useState([])
 
     return(
-        <Context.Provider  value={{elinput,setInput,all,setAll}}  >
+        <Context.Provider  value={{elinput,setInput,all,setAll,data,setData}}  >
             {children}
         </Context.Provider>
     )

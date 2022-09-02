@@ -23,7 +23,7 @@ export default function Header() {
         </ul>
         <div>
 
-        <Input></Input>
+        <Input/>
         </div>
       </nav>
     </>
