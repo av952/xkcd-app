@@ -1,0 +1,50 @@
+$der: #d4a373;
+
+.nav{
+    display: flex;
+    background-color:$der;
+}
+
+.nav a{
+    text-decoration: none;
+    padding: 2rem;
+    color: white;
+}
+
+
+/* Container display */
+
+.containerDisplay{
+    margin: 0 auto;
+    width: 30vw;
+    display: grid;
+    align-items: center;
+}
+
+
+.containerDisplay img{
+    width: 100%;
+    cursor: pointer;
+}
+
+/* imagen */
+
+
+.containerImagen{
+    margin: auto;
+    max-width: 70vw;
+    min-height: 100%;
+    display: grid;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+
+}
+
+.containerImagen img{
+    max-height: 95%;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+}
