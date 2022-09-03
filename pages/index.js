@@ -5,11 +5,10 @@ import Header from "../components/Header";
 import styles  from '../styles/header.module.scss'
 
 import {Context} from '../components/Context'
-import Buscador from '../components/Buscador';
 
 export default function Home({elementos}) {
   const [num,setNum]= useState(0)
-  const {elinput,setData,data,setClick} = useContext(Context)
+  const {setData,setClick} = useContext(Context)
 
   useEffect(()=>{
     setData(elementos)
@@ -36,7 +35,7 @@ export default function Home({elementos}) {
   );
 }
 
-export async function getStaticProps(context){
+export async function getStaticProps(){
 
   let elementos =  fs.readFileSync('./comics/data.json')
   elementos = JSON.parse(elementos)

@@ -4,7 +4,7 @@ import { Context } from "./Context";
 
 export default function Buscador() {
   
-  const { elinput,data,setAll,click,setClick,setSelect } = useContext(Context);
+  const {elinput,data,setAll,click,setSelect} = useContext(Context);
 
 
   const getSuggestions = (value) => {

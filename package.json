@@ -2,15 +2,16 @@
   "name": "xkcd-app-2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://av952.github.io/xkcd-app",
   "action": "debugWithChrome",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start2": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "build2": "next build && next export",
+    "start": "next start -p $PORT"
   },
   "dependencies": {
     "gh-pages": "^4.0.0",
