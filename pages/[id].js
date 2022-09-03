@@ -6,7 +6,11 @@ import styles  from '../styles/header.module.scss'
 
 
 /* ENCARGADO DE MOSTRAR LA INFORMACIÓN  DETALLADA DESPUÉS DE QUE HAN ECHO CLICK EN LA IMAGEN DEL MENÚ PRINCIPAL */
+<<<<<<< HEAD
 export default function Imagen({datos2}) {
+=======
+export default function imagen({datos2}) {
+>>>>>>> ccebbf76f4181e89f4f45983ba8b5e5322575673
 
   const {select} = useContext(Context)
 

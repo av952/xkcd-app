@@ -22,7 +22,11 @@ export const Display = ({datos}) => {
         <img className={styles.imgcontainer}  src={img}></img>
           </Link>
           <span> 
+<<<<<<< HEAD
             <a style={{textDecoration:'none',color:'black'}} href='https://twitter.com/avxcdeveloper' target='_blank' rel="noreferrer">
+=======
+            <a style={{textDecoration:'none',color:'black'}} href='https://twitter.com/avxcdeveloper' target='_blank'>
+>>>>>>> ccebbf76f4181e89f4f45983ba8b5e5322575673
              <span style={{margin:'10px', position:'absolute'}} >A.V.XC ✌️</span> 
             </a>
             </span> 
