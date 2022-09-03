@@ -2,3 +2,6 @@
 
 
 ### avxc
+
+
+![Imagen](/captura.png)
