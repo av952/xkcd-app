@@ -2,14 +2,16 @@ import Link from "next/link";
 import Head from "next/head";
 import styles  from '../styles/header.module.scss'
 import Input from "./Input";
+import Buscador from "./Buscador";
 
 export default function Header() {
   return (
     <>
       <Head>
-        <title>Comics</title>
+        <title>Comics xkcd</title>
       </Head>
       <nav className={styles.nav}>
+        <h3 style={{marginLeft:'5px'}}>xkcd</h3>
         <ul>
           <Link  href="/">
             Home
@@ -17,13 +19,10 @@ export default function Header() {
           <Link  href="/about">
             About
           </Link>
-          <Link  href="/search">
-            Search
-          </Link>
         </ul>
         <div>
-
         <Input/>
+        <Buscador/>
         </div>
       </nav>
     </>

@@ -9,16 +9,18 @@ import Buscador from '../components/Buscador';
 
 export default function Home({elementos}) {
   const [num,setNum]= useState(0)
-  const {elinput,setData,data} = useContext(Context)
+  const {elinput,setData,data,setClick} = useContext(Context)
 
   useEffect(()=>{
     setData(elementos)
   },[])
-  console.log(21,data);
+
+  useEffect(()=>{
+    setClick([])
+  },[num])
 
   return (
     <>
-      <Buscador data={elementos} />
       <Header />
       <div className={styles.botonesindex}>
 
@@ -27,6 +29,7 @@ export default function Home({elementos}) {
       <span  onClick={()=>setNum(Math.floor(Math.random()*elementos.length)) } >Random</span> 
       <span  onClick={()=>setNum(num+1) } >Siguiente</span> 
       </div>
+      {/* enviar unicamente como parámetro el emento que se está mostrando */}
       <Display datos={elementos[num]}/>
 
     </>
