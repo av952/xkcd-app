@@ -2,14 +2,18 @@
   "name": "xkcd-app-2",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://av952.github.io/xkcd-app",
   "action": "debugWithChrome",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-autosuggest": "^10.1.0",

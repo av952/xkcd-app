@@ -1,15 +1,16 @@
 import { useContext, useEffect } from "react";
 import { Context } from "./Context";
-import Input from "./Input";
+
 
 export default function Buscador() {
-  const { elinput, setInput,data,setAll } = useContext(Context);
+  
+  const { elinput,data,setAll,click,setClick,setSelect } = useContext(Context);
+
 
   const getSuggestions = (value) => {
     const inputValue = value.trim().toLowerCase();
     const inputLength = inputValue.length;
 
-    console.log(22,data);
     return inputLength === 0
       ? []
       : data.filter(
@@ -19,10 +20,18 @@ export default function Buscador() {
   };
   const res = getSuggestions(elinput);
 
+    //setea para poder mostrar la lista deplegable
     useEffect(()=>{
       setAll(()=>res)
     },[elinput])
 
+    //cargar la información cuando se da click en algún elemento de la lista 
+    useEffect(()=>{
+      setSelect(res)
+      //reset de all
+      setAll([])
+      
+    },[click])
 }
 
 

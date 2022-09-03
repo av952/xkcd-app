@@ -1,10 +1,18 @@
 import fs from "fs";
+import { useContext, useEffect } from "react";
+import { Context } from "../components/Context";
 import Header from "../components/Header";
 import styles  from '../styles/header.module.scss'
 
 
 /* ENCARGADO DE MOSTRAR LA INFORMACIÓN  DETALLADA DESPUÉS DE QUE HAN ECHO CLICK EN LA IMAGEN DEL MENÚ PRINCIPAL */
-export default function imagen({datos2}) {
+export default function Imagen({datos2}) {
+
+  const {select} = useContext(Context)
+
+  const img1 =  select.map(el=>el.img)
+  const img = img1.length>0?img1:datos2.img
+  
   return (
     <>
     <Header/>
@@ -12,7 +20,7 @@ export default function imagen({datos2}) {
 
       <p>{datos2.alt}</p>
        <img
-        src={datos2.img}
+        src={img}
        >
        </img>
     </div>;

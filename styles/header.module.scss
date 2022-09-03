@@ -6,7 +6,6 @@ $der: #d4a373;
     display: flex;
     background-color:$der;
     max-width: 100%;
-
 }
 
 .nav a{
@@ -124,7 +123,7 @@ $der: #d4a373;
         padding: 0;
     }
     .nav > div{
-        flex-grow: 1;
+        flex-grow:1;
     }
 
 }
@@ -181,7 +180,6 @@ $der: #d4a373;
 
     .contaninersug{
         display: block;
-        position: relative;
         width: 50px;
     }
     .subcontainer{
@@ -194,7 +192,7 @@ $der: #d4a373;
         margin: 0  auto;
         border-radius: 200px;
     }
-    .subcontainer>span{
+    .subcontainer>p{
         background-color: #ccd5ae;
         display: block;
         padding: 0.2rem;
@@ -204,7 +202,66 @@ $der: #d4a373;
         
     }
 
-    .subcontainer>span:hover{
+    .subcontainer>p:hover{
         background-color: #d4a373;
         color: white;
+    }
+
+
+    /*About*/
+
+
+    .containerAbout{
+        display: block;
+        margin: 0 auto;
+        width: 60%;
+        height: 80vh;
+    }
+
+    .containerAbout >h1{
+        text-align: center;
+    }
+
+    .containerAbout >section{
+        padding: 2rem;
+
+    }
+
+    .containerAbout>section a{
+        color: black;
+        text-decoration: none;
+        background-color: #d4a373;
+        padding: 0.2rem;
+    }
+
+    .footerAbout{
+        display: flex;
+        background-color: #ccd5ae;
+        position: fixed;  
+        bottom: 0;
+        height: 10%;
+        width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .foterIconsAbout{
+        font-size: 2rem;
+    }
+
+    .foterIconsAbout > i{
+        box-sizing: border-box;
+    }
+    .foterIconsAbout > a{
+        text-decoration: none;
+        color: black;
+        margin: 0.5rem;
+    }
+    @media(max-width:(700px)){
+        .containerAbout{
+            width: 90%;
+            margin-bottom: 30%;
+        }
     }
